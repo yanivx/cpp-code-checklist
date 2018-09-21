@@ -33,11 +33,12 @@ Use some Review tool like gerrit or plugins in Eclipse never do it in unix syste
 ```
 # Hack:
 You can make changes in your /home/alias/.vimrc with settings which will ensure that the spacing is automatically handled. 
-
+```
  vim .vimrc
  :set shiftwidth=2 // this will ensure 2 spaces automatically
  :set expandtab
  :set hls
+```
 
  # File Names
 - Header files and namespace files use suffixes: .h, .H, .hh, .hpp, or .hxx
