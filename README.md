@@ -17,7 +17,7 @@ Use some Review tool like gerrit or plugins in Eclipse never do it in unix syste
  - Consistent use of opening and closing braces 
  - Avoid using tabs wherever possible
    example 
-```cpp
+```python
    if {
    }
    else {
