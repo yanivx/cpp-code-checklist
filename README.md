@@ -17,8 +17,9 @@ Use some Review tool like gerrit or plugins in Eclipse never do it in unix syste
  - Consistent use of opening and closing braces 
  - Avoid using tabs wherever possible
    example 
-   
- <  if {
+  int main()
+  {
+   if {
    }
    else {
    }
@@ -28,7 +29,8 @@ Use some Review tool like gerrit or plugins in Eclipse never do it in unix syste
    }
    else 
    {
-   }>
+   }
+   }
 
 # Hack:
 You can make changes in your /home/alias/.vimrc with settings which will ensure that the spacing is automatically handled. 
