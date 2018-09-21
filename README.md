@@ -1,28 +1,65 @@
-# cpp-review-checklist-TCS-internal
-Checklist of CPP code before submission
-The following check list is to be used in the assessment of C++ source code during a peer
-review. Items which represent the code being reviewed should be checked.
-1. General Programming Standards and Guidelines
-Refer to the OHD General Programming Standards and Guidelines Peer Review
-Checklist to assess the adherence to the OHD General Programming Standards and
-Guidelines.
-2. C++ Programming Standards
- Readability and Maintainability
- Consistent indentation (3 or 4 spaces)
- Consistent use of braces
- No tabs used
- File Names
- Header files and namespace files use suffixes: .h, .H, .hh, .hpp, or .hxx
- Source files use suffixes: .C, .cc, .cpp, or .cxx
- UpperMixedCase is used for class or namespace file names
- lowerMixedCase is used for function file names
- File Organization
- Each file contains only one class declaration or definition except static classes
- File includes a brief description of the file after the documentation block
- The content of the file is in the following order:
-1. The preprocessor directives to prevent multiple inclusions in header files.
-2. The Documentation block described in the "OHD General Software
-Development Standards and Guidelines"
+# cpp-code-checklist before pushing any code to production environment. 
+
+NOTE:
+
+Your code compiles and binary runs as expected should not be the only criteria of considering the code is ready to delivered.
+
+# Checklist of CPP code before submission
+
+The following check list is to be used in the assessment of C++ source code if you are a reviewer or designer yourself.
+
+# Review Tools 
+Use some Review tool like gerrit or plugins in Eclipse never do it in unix system directly 
+
+# C++ Programming Standards
+ The code should be readable and easy to maintain
+ - Consistent indentation (2,3 or 4 spaces) // depends on existing framework 
+ - Consistent use of opening and closing braces 
+ - Avoid using tabs wherever possible
+   example 
+   
+   if {
+   }
+   else {
+   }
+   or 
+   if 
+   {
+   }
+   else 
+   {
+   }
+
+# Hack:
+You can make changes in your /home/alias/.vimrc with settings which will ensure that the spacing is automatically handled. 
+
+ vim .vimrc
+ :set shiftwidth=2 // this will ensure 2 spaces automatically
+ :set expandtab
+ :set hls
+
+ # File Names
+- Header files and namespace files use suffixes: .h, .H, .hh, .hpp, or .hxx
+- Source files use suffixes: .C, .cc, .cpp, or .cxx
+- UpperMixedCase is used for class or namespace file names // class Apple
+- lowerMixedCase is used for function file names // int addFunction(int x, int y);
+- CamelCasing wherever applicable like above addFunction `a` is small and `F` is in capital letter
+
+ # File Organization
+ - Each file contains only one class declaration or definition except static classes
+ - File includes a brief description of the file after the documentation block
+ - The content of the file is in the following order:
+ 
+ # PreProcessor/Header files
+ 
+ - All header files to be guarded with #ifndef #define and #endif 
+ - The preprocessor directives to prevent multiple inclusions in header files.
+ - The Documentation block with owner of the code and year of creating the file. 
+ - Development Standards and Guidelines" and a brief description of the file.
+ - use namespace wherever applicable
+ - #define and Macros to be used only when needed.
+ - Avoid using `extern` and other storage specifiers especially 
+ 
 3. A brief description of the file
 4. Include files
 5. #defines and Macros
