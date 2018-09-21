@@ -47,32 +47,43 @@ You can make changes in your /home/alias/.vimrc with settings which will ensure 
 - lowerMixedCase is used for function file names // int addFunction(int x, int y);
 - CamelCasing wherever applicable like above addFunction `a` is small and `F` is in capital letter
 
- # File Organization
+ # File Organization in CPP 
+ 
  - Each file contains only one class declaration or definition except static classes
  - File includes a brief description of the file after the documentation block
- - The content of the file is in the following order:
+ - The content of the file is in the following order
+ - Use constructor and paramterized constructor
  
  # PreProcessor/Header files
  
- - All header files to be guarded with #ifndef #define and #endif 
+ - All header files to be guarded with `#ifndef` `#define` and `#endif` 
  - The preprocessor directives to prevent multiple inclusions in header files.
  - The Documentation block with owner of the code and year of creating the file. 
  - Development Standards and Guidelines" and a brief description of the file.
  - use namespace wherever applicable
  - #define and Macros to be used only when needed.
- - Avoid using `extern` and other storage specifiers especially 
+ - Avoid using `extern` and other storage specifiers 
  
-3. A brief description of the file
-4. Include files
-5. #defines and Macros
-6. The ‘use’ directives in the source f
-7. Class or function declaration or definition
- Include Files
- C++ standard library headers that have no extension are used
- New prefix c is used instead of the old extension .h for C standard header files
- The < > pair for library and system headers is used
- The " " pair for non-system (user defined) headers is used
- No absolute or relative paths to point to the header files are use
+ # Include Files
+ 
+- With C++ standard library we use headers that have no extension
+- The < > pair for library and system headers is used
+- The " " pair for non-system (user defined) headers is used
+
+```cpp
+//Example
+
+#ifndef GRPC_HPP
+#define GRPC_HPP
+
+#include <grpc++/grpc++.h> //system files
+#include <memory>
+
+#include "localFile.h" // user defined files
+#endif GRPC_HPP
+```
+- No absolute or relative paths to point to the header files are used. Appropriate use of `Makefile` to solve the purpose.
+  example: `#include /home/vinay/someDir/include/example.h`
  The system header files first in alphabetical order followed by the non-system
  include files (including COTS includes) also in alphabetical order
  Comments
