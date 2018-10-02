@@ -1,8 +1,6 @@
 # cpp-code-checklist before pushing any code to production environment. 
 
-NOTE:
-
-Your code compiles and binary runs as expected should not be the only criteria of considering the code is ready to delivered.
+NOTE: Your code compiles and binary runs as expected should not be the only criteria of considering the code is ready to delivered.
 
 # Checklist of CPP code before submission
 
